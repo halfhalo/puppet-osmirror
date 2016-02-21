@@ -21,6 +21,7 @@ class osmirror::lvm {
 		ensure => 'mounted',
 		device => "/dev/mirror/repositories",
 		fstype => 'ext4',
+		options => 'noatime,barrier=0,commit=6000,defaults',
 		require => [Filesystem["/dev/mirror/repositories"]],
 	}
 	
