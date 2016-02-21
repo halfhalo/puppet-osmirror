@@ -5,7 +5,7 @@ class osmirror::lvm {
 	}
 	volume_group {'mirror':
 		ensure => present,
-		physical_volumes => '/dev/vbd',
+		physical_volumes => '/dev/vdb',
 	}
 	logical_volume {'repositories':
 		ensure => present,
