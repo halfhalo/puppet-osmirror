@@ -1,5 +1,5 @@
-class osmirror::nginx {
-	class { 'nginx':
+class osmirror::nginxvhost {
+	class { '::nginx':
 	}
 	nginx::resource::vhost {$::fqdn:
 		www_root => "/mnt/repositories/mirror",
