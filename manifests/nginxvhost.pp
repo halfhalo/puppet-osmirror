@@ -7,6 +7,6 @@ class osmirror::nginxvhost {
 	}
 	file{'/mnt/repositories/mirror':
 		ensure=>'directory',
-		require => [Mount['/dev/mirror/repositories']],
+		require => [File['/mnt/repositories']],
 	}
 }
